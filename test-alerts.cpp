@@ -20,7 +20,7 @@ TEST_CASE("classify temperature breach for too low") {
 }
 
 TEST_CASE("classify temperature breach for too high") {
-  REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 36) == TOO_HIGH);
+  REQUIRE(classifyTemperatureBreach(HI_ACTIVE_COOLING, 46) == TOO_HIGH);
 }
 
 TEST_CASE("classify temperature breach for normal") {
