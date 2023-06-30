@@ -11,6 +11,7 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
   return NORMAL;
 }
 
+#if 0
 BreachType classifyTemperatureBreach(
     CoolingType coolingType, double temperatureInC) {
   int lowerLimit = 0;
@@ -31,6 +32,15 @@ BreachType classifyTemperatureBreach(
   }
   return inferBreach(temperatureInC, lowerLimit, upperLimit);
 }
+#else
+BreachType classifyTemperatureBreach(
+    CoolingType coolingType, double temperatureInC) {
+  int lowerLimit[3] = {0, 0, 0};
+  int upperLimit[3] = {35, 45, 40};
+
+  return inferBreach(temperatureInC, lowerLimit[coolingType], upperLimit[coolingType]);
+}
+#endif
 
 void checkAndAlert(
     AlertTarget alertTarget, BatteryCharacter batteryChar, double temperatureInC) {
