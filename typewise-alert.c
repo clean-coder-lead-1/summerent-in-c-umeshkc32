@@ -43,7 +43,7 @@ void sendToController(BreachType breachType) {
 
 void sendToEmail(BreachType breachType) {
   const char* recepient = "a.b@c.com";
-  char breachTypeTexts[BREACH_TYPES][4] = {"", "low", "high"};
+  char breachTypeTexts[BREACH_TYPES][5] = {"", "low", "high"};
   if(breachType != NORMAL) {
       printf("To: %s\n", recepient);
       printf("Hi, the temperature is too %s\n", breachTypeTexts[breachType]);
