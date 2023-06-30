@@ -13,8 +13,8 @@ BreachType inferBreach(double value, double lowerLimit, double upperLimit) {
 
 BreachType classifyTemperatureBreach(
     CoolingType coolingType, double temperatureInC) {
-  int lowerLimit[3] = {0, 0, 0};
-  int upperLimit[3] = {35, 45, 40};
+  int lowerLimit[COOLING_TYPES] = {0, 0, 0};
+  int upperLimit[COOLING_TYPES] = {35, 45, 40};
 
   return inferBreach(temperatureInC, lowerLimit[coolingType], upperLimit[coolingType]);
 }
