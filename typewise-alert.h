@@ -1,10 +1,14 @@
 #pragma once
 
+#define COOLING_TYPES 3
+
 typedef enum {
   PASSIVE_COOLING,
   HI_ACTIVE_COOLING,
   MED_ACTIVE_COOLING
 } CoolingType;
+
+#define BREACH_TYPES 3
 
 typedef enum {
   NORMAL,
