@@ -8,6 +8,8 @@ typedef enum {
   MED_ACTIVE_COOLING
 } CoolingType;
 
+#define BREACH_TYPES 3
+
 typedef enum {
   NORMAL,
   TOO_LOW,
