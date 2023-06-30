@@ -1,5 +1,6 @@
 #pragma once
 
+#define COOLING_TYPES 3
 typedef enum {
   PASSIVE_COOLING,
   HI_ACTIVE_COOLING,
